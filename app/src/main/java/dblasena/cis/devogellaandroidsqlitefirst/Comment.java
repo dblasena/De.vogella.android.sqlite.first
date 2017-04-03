@@ -11,6 +11,8 @@ public class Comment {
     // string value for the text of the comment
     private String comment;
 
+    private String rating;
+
     /**
      * Gets the id for the comment
      * @return id
@@ -43,9 +45,15 @@ public class Comment {
      * returns a string of the comments
      * @return comment
      */
+    public void setRating(String rating) {this.rating = rating;}
+
+    public String getRating() { return rating;}
+
+
+
     // Will be used by the ArrayAdapter in the ListView
     @Override
     public String toString() {
-        return comment;
+        return comment + " " + rating;
     }
 }

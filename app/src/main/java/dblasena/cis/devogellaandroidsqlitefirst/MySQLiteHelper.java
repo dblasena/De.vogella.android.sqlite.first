@@ -23,11 +23,13 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     // sets teh version of the database to 1 when created
     private static final int DATABASE_VERSION = 1;
 
+    public static final String COLUMN_RATING = "rating";
+
     // Database creation sql statement
     private static final String DATABASE_CREATE = "create table "
             + TABLE_COMMENTS + "( " + COLUMN_ID
             + " integer primary key autoincrement, " + COLUMN_COMMENT
-            + " text not null);";
+            + " text not null, " + COLUMN_RATING + " text not null);";
     /**
      * Creats the MYSQLLiteHelper object for use in other classes
      * @param context passes in the information to create the object with the necessary information
